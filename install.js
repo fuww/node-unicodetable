@@ -14,7 +14,7 @@ keys =  ['value', 'name', 'category', 'class',
 systemfiles = [
     "/usr/share/unicode/UnicodeData.txt", // debian
     "/usr/share/unicode-data/UnicodeData.txt", // gentoo
-    process.env.NODE_UNICODETABLE_UNICODEDATA_TXT || "UnicodeData.txt", // manually downloaded
+    process.env.NODE_UNICODETABLE_UNICODEDATA_TXT || path.join(__dirname, "UnicodeData.txt"), // manually downloaded
 ],
 unicodedatafile = {
     host: "unicode.org",
